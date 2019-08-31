@@ -1,0 +1,18 @@
+server:
+  port: 8763
+
+spring:
+  application:
+    name: user-service
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: touwen
+    url: jdbc:mysql://127.0.0.1/test?characterEncoding=utf-8&useSSL=false
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7080/eureka/
+

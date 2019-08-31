@@ -1,0 +1,20 @@
+server:
+  port: 7080
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    #是否将自己注册到Eureka Server，默认为true
+    registerWithEureka: false
+    #是否从Eureka Server获取注册信息，默认为true
+    fetchRegistry: false
+    #服务注册的 URL
+  serviceUrl:
+    defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+  #服务应用名称
+spring:
+  application:
+    name: demo
+
